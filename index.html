@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Abdullah Luay</title>
+</head>
+
+<body>
+    <header>
+        <div class="name">AL</div>
+    </header>
+    <main>
+        <div class="hello" id="hello">
+            <div class="left-div" id="left-div">
+                <div class="about-me">
+                    <p>My name is <strong>Abdullah Luay</strong> and I love to code stuff</p>
+                    <p>I'm a student at <strong>Western Oregon University</strong> where I'm working on my
+                        <strong>CIS</strong> degree
+                        with focus on <strong>web development</strong></p>
+                    <p>I made this website for <strong>fun</strong> just to see what ideas I can come
+                        up<strong>!</strong></p>
+                </div>
+                <div class="return-button">
+                    <button type="button" onclick="goRightToIntro();"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="-5 -5 24 24" width="16" fill="currentColor">
+                            <path
+                                d="M10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="intro" id="intro">
+                <button type="button" onclick="goLeft();"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 24 24"
+                        width="16" fill="currentColor">
+                        <path
+                            d="M3.414 7.657l3.95 3.95A1 1 0 0 1 5.95 13.02L.293 7.364a.997.997 0 0 1 0-1.414L5.95.293a1 1 0 1 1 1.414 1.414l-3.95 3.95H13a1 1 0 0 1 0 2H3.414z">
+                        </path>
+                    </svg></button>
+                <h1>
+                    <strong>HELLO<span>!</span></strong>
+                </h1>
+                <button type="button" onclick="goRight();"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 24 24"
+                        width="16" fill="currentColor">
+                        <path
+                            d="M10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z">
+                        </path>
+                    </svg></button>
+            </div>
+            <div class="right-div" id="right-div">
+                <div class="return-button">
+                    <button type="button" onclick="goLeftToIntro();"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="-5 -5 24 24" width="16" fill="currentColor">
+                            <path
+                                d="M3.414 7.657l3.95 3.95A1 1 0 0 1 5.95 13.02L.293 7.364a.997.997 0 0 1 0-1.414L5.95.293a1 1 0 1 1 1.414 1.414l-3.95 3.95H13a1 1 0 0 1 0 2H3.414z">
+                            </path>
+                        </svg></button>
+                </div>
+                <div class="my-work">
+                    <div class="description" id="description"></div>
+                    <div class="gh" id="gh"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
