@@ -34,26 +34,6 @@ a {
     text-decoration: none;
 }
 
-@keyframes fade-in-animation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes pulse-animation {
-    0% {
-        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-    }
-
-    100% {
-        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
-}
-
 @-webkit-keyframes focus-in-expand {
     0% {
         letter-spacing: -0.5em;
@@ -85,7 +65,7 @@ a {
 }
 
 .focus-in-expand {
-    -webkit-animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: focus-in-expand 12 cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -105,155 +85,161 @@ a {
     background-color: var(--gray-5);
 }
 
-@media (min-width:320px) {
-    .name {
-        font-weight: 400;
-        position: absolute;
-        margin: 1em;
-        z-index: 1;
-    }
-
-    .name strong {
-        font-size: 1.25em;
-        font-weight: 800;
-    }
-
-    .hello {
-        display: flex;
-        height: 100vh;
-        background: linear-gradient(90deg, var(--red-1) 50%, var(--gray-5) 50%);
-    }
-
-
-    .hello button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 1em;
-        transition: all 0.5s ease-in-out;
-        z-index: 10;
-        border: 1px solid transparent;
-        border-radius: 50px;
-        animation: pulse-animation 2s infinite;
-    }
-
-    .hello button:hover {
-        border: 1px solid var(--gray-1);
-        border-radius: 50px;
-        transition: all 0.5s ease-in;
-    }
-
-    .intro {
-        font-size: 12vw;
-        font-weight: 800;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex: 0 0 100%;
-        overflow: hidden;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .right-div {
-        font-size: 1.5em;
-        display: flex;
-        justify-content: space-around;
-        flex: 0 0 0%;
-        overflow: scroll;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .left-div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-weight: 500;
-        flex: 0 0 0%;
-        overflow: hidden;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .about-me {
-        font-size: 1.5em;
-        padding: 1em;
-    }
-
-    .about-me p,
-    .description p,
-    .gh p {
-        margin-top: 1em;
-    }
-
-    .gh {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        font-size: 0.75em;
-    }
-
-    .description {
-        font-size: 1em;
-    }
-
-    .project {
-        border-bottom: 1px solid var(--gray-1);
-    }
-
-    .project:after {
-        transition: all 0.5s ease-in-out;
-        background: none repeat scroll 0 0 var(--red-1);
-        content: "";
-        display: block;
-        height: 10px;
-        width: 0;
-    }
-
-    .project:hover:after {
-        width: 100%;
-    }
-
-    .project span {
-        display: block;
-        margin-bottom: 0.5em;
-    }
-
-    .my-projects {
-        font-weight: 600;
-    }
-
-    .project-name,
-    .project-description,
-    .project-technologies-used {
-        color: var(--gray-1);
-
-    }
-
-    .return-button {
-        display: flex;
-        align-items: center;
-    }
-
-    .show {
-        flex: 0 0 100%;
-    }
-
-    .hide {
-        flex: 0 0 0%;
-    }
+.name {
+    font-weight: 400;
+    position: absolute;
+    margin: 1em;
+    z-index: 1;
 }
+
+.name strong {
+    font-size: min(4vw, 36px);
+    font-weight: 800;
+}
+
+.hello {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(90deg, var(--red-1) 50%, var(--gray-5) 50%);
+}
+
+
+.hello button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+    z-index: 10;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.hello button:hover {
+    border: 1px solid var(--gray-1);
+    border-radius: 50px;
+    transition: all 0.5s ease-in;
+}
+
+.intro {
+    font-size: min(15vw, 500px);
+    font-weight: 800;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0 0 100%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.right-div {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 0 0 0%;
+    overflow: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.left-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 0%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-me {
+    font-size: min(4vw, 24px);
+    padding: 1em;
+}
+
+.about-me p,
+.description p,
+.gh p {
+    margin-top: 1em;
+}
+
+.gh {
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+    grid-auto-rows: 1fr;
+
+    gap: 12px;
+    font-size: min(3vw, 24px);
+}
+
+.description {
+    font-size: min(3vw, 24px);
+}
+
+.description p {
+    text-align: center;
+}
+
+.project {
+    background-color: var(--gray-4);
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 1em 1em 0em;
+}
+
+.project:after {
+    transition: all 0.5s ease-in-out;
+    background: none repeat scroll 0 0 var(--red-1);
+    content: "";
+    display: block;
+    height: 5px;
+    width: 0;
+}
+
+.project:hover:after {
+    width: 100%;
+}
+
+.project span {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.my-projects {
+    font-weight: 600;
+}
+
+.project-name,
+.project-description,
+.project-technologies-used {
+    color: var(--gray-1);
+
+}
+
+.return-button {
+    display: flex;
+    align-items: center;
+}
+
+.show {
+    flex: 0 0 100%;
+}
+
+.hide {
+    flex: 0 0 0%;
+}
+
+@media (min-width:320px) {}
 
 @media (min-width:481px) {}
 
 @media (min-width:641px) {
-    .my-work {
+    /* .my-work {
         padding: 1em;
-    }
+    } */
 }
 
 @media (min-width:961px) {
-    .my-work {
+    /* .my-work {
         padding: 2em;
-    }
+    } */
 }
 
 @media (min-width:1025px) {}
