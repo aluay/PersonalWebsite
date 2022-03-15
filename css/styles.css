@@ -89,12 +89,33 @@ a {
     animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.red-1 {
+    color: var(--red-1);
+}
+
+.red-1-bg {
+    background-color: var(--red-1);
+}
+
+.gray-5 {
+    color: var(--gray-5);
+}
+
+.gray-5-bg {
+    background-color: var(--gray-5);
+}
+
 @media (min-width:320px) {
     .name {
         font-weight: 400;
         position: absolute;
         margin: 1em;
         z-index: 1;
+    }
+
+    .name strong {
+        font-size: 1.25em;
+        font-weight: 800;
     }
 
     .hello {
@@ -133,15 +154,10 @@ a {
         transition: all 0.5s ease-in-out;
     }
 
-    .intro span {
-        color: var(--red-1);
-    }
-
     .right-div {
         font-size: 1.5em;
         display: flex;
         justify-content: space-around;
-        background-color: var(--gray-5);
         flex: 0 0 0%;
         overflow: scroll;
         transition: all 0.5s ease-in-out;
@@ -152,7 +168,6 @@ a {
         justify-content: space-around;
         align-items: center;
         font-weight: 500;
-        background-color: var(--red-1);
         flex: 0 0 0%;
         overflow: hidden;
         transition: all 0.5s ease-in-out;
@@ -161,10 +176,6 @@ a {
     .about-me {
         font-size: 1.5em;
         padding: 1em;
-    }
-
-    .about-me strong {
-        color: var(--gray-5);
     }
 
     .about-me p,
@@ -182,11 +193,6 @@ a {
 
     .description {
         font-size: 1em;
-    }
-
-    .description a {
-        color: var(--red-1);
-        text-decoration: none;
     }
 
     .project {
@@ -207,17 +213,12 @@ a {
     }
 
     .project span {
-        color: var(--red-1);
         display: block;
         margin-bottom: 0.5em;
     }
 
     .my-projects {
         font-weight: 600;
-    }
-
-    .my-work strong {
-        color: var(--red-1);
     }
 
     .project-name,
