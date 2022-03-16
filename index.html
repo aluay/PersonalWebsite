@@ -16,66 +16,74 @@
 
 <body>
     <header>
-        <div class="name"><strong>AL</strong></div>
+        <nav class="side-nav">
+            <div class="side-nav-inner">
+                <div class="side-nav-top"><a href="#">Abdullah Luay</a></div>
+                <div class="side-nav-bottom">
+                    <a href="https://github.com/aluay">GitHub</a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <div class="hello" id="hello">
-            <div class="left-div red-1-bg" id="left-div">
-                <div class="about-me">
-                    <p>My name is <strong class="gray-5">Abdullah Luay</strong> and I love to code stuff</p>
-                    <p>I'm a student at <strong class="gray-5">Western Oregon University</strong> where I'm working on
-                        my
-                        <strong class="gray-5">CIS</strong> degree
-                        with focus on <strong class="gray-5">web development</strong></p>
-                    <p>I made this website for <strong class="gray-5">fun</strong> and also to polish my
-                        skills<strong class="gray-5">!</strong></p>
-                </div>
-                <div class="return-button">
-                    <button type="button" onclick="goRightToIntro();"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="-5 -5 24 24" width="16" fill="currentColor">
-                            <path
-                                d="M10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z">
-                            </path>
-                        </svg>
-                    </button>
+        <section class="hello" id="hello">
+            <a class="pre" href="#hello"><span>#1</span> Hello</a>
+            <div class="section-inner">
+                <h1>Hello</h1>
+                <div class="list">
+                    <ul class="hello-list" id="hello-list">
+                        <li><a href="#about">About <span>#1 Who is this guy?</span></a></li>
+                        <li><a href="#work">Work <span>#2 Who does he work for?</span></a></li>
+                        <li><a href="#projects">Projects <span>#3 What has he worked on?</span></a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="intro" id="intro">
-                <button type="button" onclick="goLeft();"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 24 24"
-                        width="16" fill="currentColor">
-                        <path
-                            d="M3.414 7.657l3.95 3.95A1 1 0 0 1 5.95 13.02L.293 7.364a.997.997 0 0 1 0-1.414L5.95.293a1 1 0 1 1 1.414 1.414l-3.95 3.95H13a1 1 0 0 1 0 2H3.414z">
-                        </path>
-                    </svg></button>
-                <h1 class="focus-in-expand">
-                    <strong>HELLO<span class="red-1">!</span></strong>
-                </h1>
-                <button type="button" onclick="goRight();"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 24 24"
-                        width="16" fill="currentColor">
-                        <path
-                            d="M10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z">
-                        </path>
-                    </svg></button>
-            </div>
-            <div class="right-div gray-5-bg" id="right-div">
-                <div class="return-button">
-                    <button type="button" onclick="goLeftToIntro();"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="-5 -5 24 24" width="16" fill="currentColor">
-                            <path
-                                d="M3.414 7.657l3.95 3.95A1 1 0 0 1 5.95 13.02L.293 7.364a.997.997 0 0 1 0-1.414L5.95.293a1 1 0 1 1 1.414 1.414l-3.95 3.95H13a1 1 0 0 1 0 2H3.414z">
-                            </path>
-                        </svg></button>
-                </div>
-                <div class="my-work">
-                    <div class="description" id="description"></div>
-                    <div class="gh" id="gh"></div>
+        </section>
+        <section class="about" id="about">
+            <a class="pre" href="#about"><span>#2</span> About</a>
+            <div class="section-inner">
+                <h1>Abdullah is a student at Western Oregon University.</h1>
+                <p>He is working on his Computer System Information degree with focus on Web Development.</p>
+                <p>He has worked with many programming languages before, including these:</p>
+                <div class="list">
+                    <ul class="about-list" id="about-list">
+                        <li><span>#1</span> JavaScript - ExpressJs</li>
+                        <li><span>#2</span> HTML/CSS - and CSS Preprocessor</li>
+                        <li><span>#3</span> Java</li>
+                        <li><span>#4</span> Python</li>
+                        <li><span>#5</span> C++</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="work" id="work">
+            <a class="pre" href="#work"><span>#3</span> Work</a>
+            <div class="section-inner">
+                <h1>Abdullah works at Nike as a Level 2 IT Support Agent.</h1>
+                <p>Providing support to the Advanced Innovation Collective team at Nike.</p>
+                <h2>Some of the things Abdullah has done at Nike:</h2>
+                <div class="list">
+                    <ul class="work-list" id="work-list">
+                        <li><span>#1</span> Respond to incidents</li>
+                        <li><span>#2</span> Install software and hardware</li>
+                        <li><span>#3</span> Participate in internal Innovation projects</li>
+                        <li><span>#4</span> Provide support to VP and VIP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <a class="pre" href="#projects"><span>#4</span> Projects</a>
+            <div class="section-inner">
+                <h1>Abdullah has created some projects for you to check out.</h1>
+                <p>Below are the projects Abdullah's GitHub:</p>
+                <div class="list">
+                    <ul class="projects-list" id="projects-list"></ul>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
