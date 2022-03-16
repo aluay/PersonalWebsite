@@ -15,7 +15,7 @@ function insertGHData(data) {
     data[0].forEach(function (element, i) {
         document.getElementById("projects-list").innerHTML +=
             `<li>
-                <span class="red-1">#${i+1}</span>&nbsp; <a href=${element.html_url} target="_blank">${element.name}</a>
+                <span>#${i+1}</span>&nbsp; <a href=${element.html_url} target="_blank">${element.name}</a>
             </li>`;
     });
 }
