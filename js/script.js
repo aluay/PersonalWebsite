@@ -1,6 +1,6 @@
 /*
     When the window loads up, fetch the info from GitHub
-    annd pass it to the insertDHData function
+    and pass it to the insertDHData function
 */
 window.onload = function gh() {
     Promise.all([
