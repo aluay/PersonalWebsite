@@ -1,8 +1,8 @@
 :root {
-    --yellow: #fcf300;
+    --yellow: #fff951;
     --white: #fff;
     --red: #ff5851;
-    --gray: #505050;
+    --gray: #5b5b5b;
     --blue: #4cc9f0;
     --green: #a1ff0a;
     --black: #000;
@@ -27,7 +27,7 @@ body {
     backface-visibility: hidden !important;
 }
 
-/* Side nav */
+/* Side Nav */
 .side-nav {
     position: fixed;
     top: 0;
@@ -35,8 +35,8 @@ body {
     bottom: 0;
     z-index: 1000;
     width: 50px;
-    border-right: 1px dashed rgba(0, 0, 0, 0.3);
-    color: rgba(0, 0, 0, 0.5);
+    border-right: 1px dashed var(--gray);
+    color: var(--gray);
     text-transform: uppercase;
 }
 
@@ -54,17 +54,17 @@ body {
     height: 50px;
     line-height: 50px;
     white-space: nowrap;
-    word-spacing: 0.5rem;
+    word-spacing: 0.5em;
 }
 
 .side-nav .side-nav-top {
-    top: 5em;
+    top: 10em;
     text-align: right;
 }
 
 .side-nav .side-nav-bottom {
     top: auto;
-    bottom: 5em;
+    bottom: 10em;
 }
 
 /* Sections */
@@ -72,18 +72,16 @@ section {
     display: block;
     margin: 0 auto;
     width: 100%;
-    padding: 20em 5em;
+    padding: 15em 5em;
 }
 
 section h1 {
     font-size: min(3.5em, 56px);
     margin: 0.25em auto 1em auto;
     font-weight: 800;
-    color: var(--gray);
 }
 
 section a {
-    font-size: min(0.75em, 16px);
     text-decoration: none;
     color: var(--gray);
 }
@@ -91,6 +89,28 @@ section a {
 section li {
     margin: 1em auto;
     font-weight: 400;
+    text-transform: capitalize;
+}
+
+.hello {
+    background-color: var(--yellow);
+    color: var(--gray);
+}
+
+.about {
+    background: var(--white);
+    color: var(--gray);
+
+}
+
+.work {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.projects {
+    background-color: var(--blue);
+    color: var(--gray);
 }
 
 .pre {
@@ -108,16 +128,13 @@ section li {
     height: 100%;
 }
 
-.hello {
-    background-color: var(--yellow);
-}
-
+/* Lists */
 .hello-list li::after {
     content: "";
-    width: 1.3rem;
+    width: 50px;
     display: block;
     height: 2px;
-    background: black;
+    background: var(--black);
 }
 
 .hello-list li:last-child::after {
@@ -126,8 +143,7 @@ section li {
 
 .hello-list a {
     display: block;
-    padding: 1em 0;
-    font-family: "nimbus-sans", sans-serif;
+    padding-bottom: 1em;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.4px;
@@ -135,33 +151,23 @@ section li {
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
 
-.hello-list a span {
+.hello-list span,
+.about-list span,
+.work-list span,
+.projects-list span {
     display: inline;
     padding: 0.5em 0 0;
     opacity: 0.3;
     letter-spacing: normal;
-    font-family: "ff-meta-serif-web-pro", serif;
     text-transform: none;
 }
 
-.hello-list a:hover {
+.hello-list a:hover,
+.projects-list a:hover {
     color: var(--red);
 }
 
 .hello-list a:hover span {
     opacity: 1;
     color: var(--gray);
-}
-
-.about {
-    background: var(--white);
-}
-
-.work {
-    background-color: var(--red);
-    color: var(--white);
-}
-
-.projects {
-    background-color: var(--blue);
 }
