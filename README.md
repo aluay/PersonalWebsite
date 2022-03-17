@@ -1,4 +1,5 @@
 # PersonalWebsite
-Personal website that is still in progress
+
+### WIP personal website
 
 URL: https://aluay.github.io/PersonalWebsite/
