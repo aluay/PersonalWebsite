@@ -23,7 +23,7 @@ function insertGHData(data) {
 /* 
     Toggle dark mode on and off
 */
-function myFunction() {
+function darkMode() {
     const pre = document.querySelectorAll('.pre');
     pre.forEach(pre => {
         pre.classList.toggle("red-font");
