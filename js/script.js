@@ -24,22 +24,14 @@ function insertGHData(data) {
     Toggle dark mode on and off
 */
 function myFunction() {
-    document.getElementById("side-nav").classList.toggle("dark-mode");
-    document.getElementById("hello").classList.toggle("dark-mode");
-    document.getElementById("about").classList.toggle("dark-mode");
-    document.getElementById("work").classList.toggle("dark-mode");
-    document.getElementById("projects").classList.toggle("dark-mode");
-
     const pre = document.querySelectorAll('.pre');
-
     pre.forEach(pre => {
         pre.classList.toggle("red-font");
     });
 
-
     const sections = document.querySelectorAll(".section");
-
     sections.forEach(section => {
+        section.classList.toggle("dark-mode");
         section.classList.toggle("border");
     })
 
