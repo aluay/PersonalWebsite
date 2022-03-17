@@ -42,4 +42,10 @@ function myFunction() {
     sections.forEach(section => {
         section.classList.toggle("border");
     })
+
+    if (document.getElementById("dark-button").innerHTML == "LIGHT") {
+        document.getElementById("dark-button").innerHTML = "DARK";
+    } else {
+        document.getElementById("dark-button").innerHTML = "LIGHT";
+    }
 }

@@ -78,7 +78,7 @@ body {
     color: var(--gray-variant);
     border: 1px dashed var(--gray-variant);
     cursor: pointer;
-    padding: 0em 1em;
+    width: 50px;
     font-weight: 600;
 }
 
