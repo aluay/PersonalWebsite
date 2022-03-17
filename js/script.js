@@ -23,6 +23,10 @@ function insertGHData(data) {
 /* 
     Toggle dark mode on and off
 */
+
+//  Event listener instead of inline onclick
+document.getElementById("dark-button").addEventListener("click", darkMode);
+
 function darkMode() {
     const pre = document.querySelectorAll('.pre');
     pre.forEach(pre => {
