@@ -3,13 +3,15 @@
     --white: #fff;
     --red: #ff5851;
     --gray: #5b5b5b;
+    --gray-variant: #D3D3D3;
     --blue: #4cc9f0;
-    --green: #a1ff0a;
+    --green: #67a700;
     --black: #000;
 }
 
 * {
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 
 body {
@@ -46,7 +48,7 @@ body {
 }
 
 .side-nav a:hover {
-    color: var(--red);
+    color: var(--black);
 }
 
 .side-nav .side-nav-top,
@@ -62,7 +64,7 @@ body {
 }
 
 .side-nav .side-nav-top {
-    top: 10em;
+    top: 13em;
     text-align: right;
 }
 
@@ -71,12 +73,22 @@ body {
     bottom: 10em;
 }
 
+.side-nav button {
+    background-color: var(--black);
+    color: var(--gray-variant);
+    border: 1px dashed var(--gray-variant);
+    cursor: pointer;
+    padding: 0em 1em;
+    font-weight: 600;
+}
+
 /* Sections */
 section {
     display: block;
     margin: 0 auto;
     width: 100%;
     padding: 15em 5em;
+
 }
 
 section h1 {
@@ -102,7 +114,7 @@ section p {
 
 .pre {
     font-size: 1em;
-    color: var(--white);
+    color: var(--gray);
     font-weight: 400;
 }
 
@@ -114,11 +126,6 @@ section p {
 .section-inner {
     max-width: 800px;
     height: 100%;
-}
-
-.hello .pre,
-.about .pre {
-    color: var(--black);
 }
 
 .hello {
@@ -186,26 +193,39 @@ section p {
     color: var(--gray);
 }
 
-.about-list li {
-    color: var(--red);
-    font-weight: 800;
-}
-
-.about-list span,
-.work-list span {
-    color: var(--gray);
-    font-weight: 300;
-}
-
-.work-list li {
+.about-list li,
+.work-list li,
+.projects-list li {
     font-weight: 800;
 }
 
 .projects-list a {
-    color: var(--white);
-    font-weight: 800;
+    color: var(--D3D3D3);
 }
 
 .projects-list a:hover {
     border-bottom: 0.2em solid;
+}
+
+/*
+    Dark mode class
+*/
+.dark-mode {
+    background-color: var(--black);
+    color: var(--gray-variant);
+}
+
+/* 
+    Dark mode font 
+*/
+.red-font {
+    color: var(--red);
+}
+
+
+/*
+    Dark mode border
+*/
+.border {
+    border-bottom: 1px dashed rgba(158, 158, 158, 0.5);
 }
