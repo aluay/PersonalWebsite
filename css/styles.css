@@ -76,7 +76,7 @@ body {
 .dark-button {
     background-color: var(--black);
     color: var(--white);
-    border: 1px dashed var(--gray-variant);
+    border: none;
     cursor: pointer;
     width: 50px;
     font-weight: 600;
