@@ -24,14 +24,14 @@ function insertGHData(data) {
     Toggle dark mode on and off
 */
 //  Event listener instead of inline onclick
-document.getElementById("dark-button").addEventListener("click", darkMode);
+document.getElementById("side-nav-dark-button").addEventListener("click", darkMode);
 
 function darkMode() {
-    document.getElementById("dark-button").classList.toggle("dark-mode-button");
-    if (document.getElementById("dark-button").innerHTML == "LIGHT") {
-        document.getElementById("dark-button").innerHTML = "DARK";
+    document.getElementById("side-nav-dark-button").classList.toggle("dark-mode-button");
+    if (document.getElementById("side-nav-dark-button").innerHTML == "LIGHT") {
+        document.getElementById("side-nav-dark-button").innerHTML = "DARK";
     } else {
-        document.getElementById("dark-button").innerHTML = "LIGHT";
+        document.getElementById("side-nav-dark-button").innerHTML = "LIGHT";
     }
 
     const pre = document.querySelectorAll('.pre');
