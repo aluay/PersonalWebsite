@@ -73,9 +73,9 @@ body {
     bottom: 10em;
 }
 
-.side-nav button {
+.dark-button {
     background-color: var(--black);
-    color: var(--gray-variant);
+    color: var(--white);
     border: 1px dashed var(--gray-variant);
     cursor: pointer;
     width: 50px;
@@ -164,7 +164,7 @@ section p {
 
 .hello-list a {
     display: block;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.4px;
@@ -208,25 +208,28 @@ section p {
 }
 
 /*
-    Dark mode class
+    DARK MODE CSS
 */
-.dark-mode {
+
+/*  Dark mode background    */
+.dark-mode-background {
     background: linear-gradient(90deg, var(--black) 21px, transparent 1%) center, linear-gradient(var(--black) 21px, transparent 99%) center, var(--gray);
     background-size: 22px 22px;
     color: var(--gray-variant);
 }
 
-/* 
-    Dark mode font 
-*/
-.red-font {
+/*  Dark mode button    */
+.dark-mode-button {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/*  Dark mode font  */
+.dark-mode-red-font {
     color: var(--red);
 }
 
-
-/*
-    Dark mode border
-*/
-.border {
+/*  Dark mode border    */
+.dark-mode-border {
     border-bottom: 1px dashed rgba(158, 158, 158, 0.5);
 }

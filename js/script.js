@@ -23,25 +23,25 @@ function insertGHData(data) {
 /* 
     Toggle dark mode on and off
 */
-
 //  Event listener instead of inline onclick
 document.getElementById("dark-button").addEventListener("click", darkMode);
 
 function darkMode() {
-    const pre = document.querySelectorAll('.pre');
-    pre.forEach(pre => {
-        pre.classList.toggle("red-font");
-    });
-
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(section => {
-        section.classList.toggle("dark-mode");
-        section.classList.toggle("border");
-    })
-
+    document.getElementById("dark-button").classList.toggle("dark-mode-button");
     if (document.getElementById("dark-button").innerHTML == "LIGHT") {
         document.getElementById("dark-button").innerHTML = "DARK";
     } else {
         document.getElementById("dark-button").innerHTML = "LIGHT";
     }
+
+    const pre = document.querySelectorAll('.pre');
+    pre.forEach(pre => {
+        pre.classList.toggle("dark-mode-red-font");
+    });
+
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(section => {
+        section.classList.toggle("dark-mode-background");
+        section.classList.toggle("dark-mode-border");
+    })
 }
