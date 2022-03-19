@@ -92,7 +92,7 @@ section {
 }
 
 section h1 {
-    font-size: min(3.5em, 56px);
+    font-size: min(10vw, 80px);
     margin: 0.25em auto 1em auto;
     font-weight: 800;
 }
@@ -124,7 +124,6 @@ section p {
 }
 
 .section-inner {
-    max-width: 800px;
     height: 100%;
 }
 
@@ -166,7 +165,7 @@ section p {
     display: block;
     padding-bottom: 2em;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1em;
     letter-spacing: 1.4px;
     color: inherit;
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
@@ -200,7 +199,7 @@ section p {
 }
 
 .projects-list a {
-    color: var(--D3D3D3);
+    color: var(--white);
 }
 
 .projects-list a:hover {
@@ -208,7 +207,7 @@ section p {
 }
 
 /*
-    DARK MODE CSS
+    DARK MODE CSS CLASSES
 */
 
 /*  Dark mode background    */
