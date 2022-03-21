@@ -42,6 +42,5 @@ function darkMode() {
     const sections = document.querySelectorAll(".section");
     sections.forEach(section => {
         section.classList.toggle("dark-mode-background");
-        section.classList.toggle("dark-mode-border");
     })
 }

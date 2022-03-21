@@ -236,11 +236,6 @@ section p {
     color: var(--red);
 }
 
-/*  Dark mode border    */
-.dark-mode-border {
-    border-bottom: 1px dashed rgba(158, 158, 158, 0.5);
-}
-
 /*  ANIMATIONS  */
 
 /*  Nav border animations   */
