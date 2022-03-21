@@ -7,11 +7,18 @@
     --blue: #4cc9f0;
     --green: #67a700;
     --black: #000;
+    --volt: #ceff00;
 }
 
 * {
     box-sizing: border-box;
     transition: all 0.5s;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--volt);
+    color: var(--black);
 }
 
 body {
@@ -37,9 +44,12 @@ body {
     bottom: 0;
     z-index: 1000;
     width: 50px;
-    border-right: 1px dashed var(--gray);
     color: var(--gray);
     text-transform: uppercase;
+    background: linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%), linear-gradient(0deg, var(--gray) 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 1px 10px;
+    animation: border-dance 30s infinite linear;
 }
 
 .side-nav a {
@@ -87,8 +97,8 @@ section {
     display: block;
     margin: 0 auto;
     width: 100%;
-    padding: 25em 1em 25em 5em;
-
+    height: 100vh;
+    padding: 10em 5em;
 }
 
 section h1 {
@@ -121,10 +131,6 @@ section p {
 .pre span {
     font-size: 0.75em;
     color: var(--gray);
-}
-
-.section-inner {
-    height: 100%;
 }
 
 .hello {
@@ -233,4 +239,17 @@ section p {
 /*  Dark mode border    */
 .dark-mode-border {
     border-bottom: 1px dashed rgba(158, 158, 158, 0.5);
+}
+
+/*  ANIMATIONS  */
+
+/*  Nav border animations   */
+@keyframes border-dance {
+    0% {
+        background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+    }
+
+    100% {
+        background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+    }
 }
