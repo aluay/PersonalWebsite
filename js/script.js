@@ -44,3 +44,66 @@ function darkMode() {
         section.classList.toggle("dark-mode-background");
     })
 }
+
+/*
+    Section Animations
+*/
+
+ScrollReveal({
+    reset: true,
+    distance: '50px',
+    duration: 1500,
+    delay: 100
+});
+
+//Hello section animation
+ScrollReveal().reveal('.greeting', {
+    delay: 200,
+    origin: 'right'
+});
+ScrollReveal().reveal('.hello-list', {
+    delay: 200,
+    origin: 'bottom'
+});
+
+//About section animation
+ScrollReveal().reveal('.about-h1', {
+    delay: 200,
+    origin: 'top'
+});
+ScrollReveal().reveal('.about-p', {
+    delay: 200,
+    origin: 'right'
+});
+ScrollReveal().reveal('.about-list', {
+    delay: 200,
+    origin: 'bottom'
+});
+
+//Work section animation
+ScrollReveal().reveal('.work-h1', {
+    delay: 200,
+    origin: 'right'
+});
+ScrollReveal().reveal('.work-p', {
+    delay: 200,
+    origin: 'left'
+});
+ScrollReveal().reveal('.work-list', {
+    delay: 200,
+    origin: 'top'
+});
+
+//  Projects section animation
+ScrollReveal().reveal('.projects-h1', {
+    delay: 200,
+    origin: 'bottom'
+});
+ScrollReveal().reveal('.projects-p', {
+    delay: 200,
+    origin: 'left'
+});
+ScrollReveal().reveal('.projects-list', {
+    delay: 200,
+    origin: 'top'
+});
