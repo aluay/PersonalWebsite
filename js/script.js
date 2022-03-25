@@ -50,7 +50,7 @@ function darkMode() {
 */
 
 ScrollReveal({
-    reset: true,
+    // reset: true,
     distance: '50px',
     duration: 1500,
     delay: 100
@@ -107,3 +107,13 @@ ScrollReveal().reveal('.projects-list', {
     delay: 200,
     origin: 'top'
 });
+
+
+/*
+    WIP rotate thingy
+*/
+/*
+window.addEventListener("scroll", function () {
+    document.getElementById("hello").style.transform = "rotate(-" + window.pageYOffset + "deg)";
+});
+*/
