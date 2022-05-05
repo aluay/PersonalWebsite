@@ -1,249 +1,114 @@
+/*	Color variables	*/
 :root {
-    --yellow: #fff951;
-    --white: #fff;
-    --red: #ff5851;
-    --gray: #5b5b5b;
-    --gray-variant: #D3D3D3;
-    --blue: #4cc9f0;
-    --green: #67a700;
-    --black: #000;
-    --volt: #ceff00;
+	--dark: #000;
+	--light-gray: #ededed;
+	--gray: #141414;
+	--rose: #f48297;
+	--red: #ff4242;
+
+	--pastel-red: #ffb3c8;
+	--pastel-pink: #fed3f1;
+	--pastel-teal: #c9f4fe;
+	--pastel-yellow: #fffee3;
+	--pastel-purple: #c4d5fe;
+	--pastel-green: #c9f1c6;
 }
 
+/*	Tag styles	*/
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
-::selection {
-    background-color: var(--volt);
-    color: var(--black);
+html,
+body {
+	height: 100%;
 }
 
 body {
-    color: var(--gray-1);
-    background-color: var(--white-1);
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-font-smoothing: unset !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    -webkit-backface-visibility: hidden !important;
-    -moz-backface-visibility: hidden !important;
-    backface-visibility: hidden !important;
+	color: var(--gray);
+	font-family: "IBM Plex Mono", monospace;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-font-smoothing: unset !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-backface-visibility: hidden !important;
+	-moz-backface-visibility: hidden !important;
+	backface-visibility: hidden !important;
 }
 
-/* Side Nav */
-.side-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000;
-    width: 50px;
-    color: var(--gray);
-    text-transform: uppercase;
-    background: linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(0deg, transparent 50%, transparent 50%), linear-gradient(0deg, var(--gray) 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-size: 15px 4px, 15px 4px, 4px 15px, 1px 10px;
-    animation: border-dance 30s infinite linear;
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+	text-align: left;
+	line-height: 1.2;
+	background-color: var(--light-gray);
+	transition: all 0.5s;
 }
 
-.side-nav a {
-    text-decoration: none;
-    color: currentColor;
+h1 {
+	font-weight: 900;
+	font-size: clamp(18px, 6vw, 38px);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.side-nav a:hover {
-    color: var(--black);
+h2 {
+	margin: 0.5em 0em;
+	font-weight: 400;
+	font-size: clamp(18px, 5vw, 24px);
 }
 
-.side-nav .side-nav-top,
-.side-nav .side-nav-bottom {
-    position: absolute;
-    left: 0;
-    transform: rotate(-90deg) perspective(1px);
-    transform-origin: 50px 50px;
-    height: 50px;
-    line-height: 50px;
-    white-space: nowrap;
-    word-spacing: 0.5em;
+p {
+	display: inline;
+	font-weight: lighter;
+	font-size: clamp(18px, 4vw, 20px);
 }
 
-.side-nav .side-nav-top {
-    top: 13em;
-    text-align: right;
+p:hover {
+	animation: colors 2s infinite;
 }
 
-.side-nav .side-nav-bottom {
-    top: auto;
-    bottom: 10em;
+span {
+	color: var(--red);
+	cursor: pointer;
 }
 
-.side-nav-dark-button {
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    width: 50px;
-    font-weight: 600;
+/*  CSS Classes*/
+.dark-mode {
+	background-color: var(--gray);
+	color: var(--light-gray);
 }
 
-/* Sections */
-section {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    padding: 5em 5em;
-}
-
-section h1 {
-    font-size: min(10vw, 80px);
-    margin: 0.25em auto 1em auto;
-    font-weight: 800;
-}
-
-section a {
-    text-decoration: none;
-    color: var(--gray);
-}
-
-section li {
-    margin: 2em auto;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-section p {
-    font-weight: 600;
-}
-
-.pre {
-    font-size: 1em;
-    color: var(--gray);
-    font-weight: 400;
-}
-
-.pre span {
-    font-size: 0.75em;
-    color: var(--gray);
-}
-
-.hello {
-    background-color: var(--yellow);
-    color: var(--black);
-}
-
-.about {
-    background: var(--white);
-    color: var(--gray);
-
-}
-
-.work {
-    background-color: var(--red);
-    color: var(--white);
-}
-
-.projects {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-/* Lists */
-.hello-list li::after {
-    content: "";
-    width: 50px;
-    display: block;
-    height: 2px;
-    background: var(--black);
-}
-
-.hello-list li:last-child::after {
-    display: none;
-}
-
-.hello-list a {
-    display: block;
-    padding-bottom: 2em;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 800;
-    letter-spacing: 1.4px;
-    color: inherit;
-    transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
-}
-
-.hello-list span,
-.about-list span,
-.work-list span,
-.projects-list span {
-    display: inline;
-    padding: 0.5em 0 0;
-    opacity: 0.3;
-    letter-spacing: normal;
-    text-transform: none;
-}
-
-.hello-list a:hover,
-.projects-list a:hover {
-    color: var(--red);
-}
-
-.hello-list a:hover span {
-    opacity: 1;
-    color: var(--gray);
-}
-
-.about-list li,
-.work-list li,
-.projects-list li {
-    font-weight: 800;
-    font-size: 0.9em;
-}
-
-.projects-list a {
-    color: var(--white);
-}
-
-.projects-list a:hover {
-    border-bottom: 0.2em solid;
-}
-
-/*
-    DARK MODE CSS CLASSES
-*/
-
-/*  Dark mode background    */
-.dark-mode-background {
-    background: linear-gradient(90deg, var(--black) 21px, transparent 1%) center, linear-gradient(var(--black) 21px, transparent 99%) center, var(--gray);
-    background-size: 22px 22px;
-    color: var(--gray-variant);
-}
-
-/*  Dark mode button    */
-.dark-mode-button {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-/*  Dark mode font  */
-.dark-mode-red-font {
-    color: var(--red);
-}
-
-/*  ANIMATIONS  */
-
-/*  Nav border animations   */
-@keyframes border-dance {
-    0% {
-        background-position: 0 0, 100% 100%, 0 100%, 100% 0;
-    }
-
-    100% {
-        background-position: 100% 0, 0 100%, 0 0, 100% 100%;
-    }
+/*  Animations  */
+@keyframes colors {
+	0% {
+		background-color: var(--pastel-green);
+		color: var(--gray);
+	}
+	20% {
+		background-color: var(--pastel-pink);
+		color: var(--gray);
+	}
+	40% {
+		background-color: var(--pastel-purple);
+		color: var(--gray);
+	}
+	60% {
+		background-color: var(--pastel-red);
+		color: var(--gray);
+	}
+	80% {
+		background-color: var(--pastel-teal);
+		color: var(--gray);
+	}
+	100% {
+		background-color: var(--pastel-yellow);
+		color: var(--gray);
+	}
 }
