@@ -1,117 +1,88 @@
 /*	Color variables	*/
 :root {
-  --dark: #000;
-  --light-gray: #f9f7f1;
-  --gray: #2f2f2f;
-  --rose: #f48297;
-  --red: #ff4242;
+	--white: #fff;
+	--dark-blue: #202931;
+	--light-blue: #5d768d;
+	--light-gray: #edf0f4;
+	--gray: #ebebeb;
+	--red: #ee5253;
+}
 
-  --pastel-red: #ffb3c8;
-  --pastel-pink: #fed3f1;
-  --pastel-teal: #c9f4fe;
-  --pastel-yellow: #fffee3;
-  --pastel-purple: #c4d5fe;
-  --pastel-green: #c9f1c6;
+::selection {
+	background-color: var(--red);
+	color: var(--white);
 }
 
 /*	Tag styles	*/
 * {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-  color: var(--gray);
-  background-color: var(--light-gray);
-  letter-spacing: 3px;
-  font-family: "IBM Plex Mono", monospace;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: unset !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  -webkit-backface-visibility: hidden !important;
-  -moz-backface-visibility: hidden !important;
-  backface-visibility: hidden !important;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  line-height: 1.5;
-  transition: all 0.5s;
+	color: var(--dark-blue);
+	background-color: var(--white);
+	font-family: "Inter", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: clamp(18px, 6vw, 38px);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: 900;
+	font-size: clamp(32px, 6vw, 48px);
 }
 
 h2 {
-  margin: 0.5em 0em;
-  font-size: clamp(18px, 2vw, 24px);
+	margin: 0.5em 0em;
+	font-size: clamp(18px, 2vw, 24px);
+}
+
+ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	margin-top: 2em;
 }
 
 li {
-  float: left;
-  clear: both;
-  text-decoration: solid underline;
-  font-size: clamp(18px, 4vw, 20px);
+	padding: 1em;
+	cursor: pointer;
+	border-radius: 7px;
+	border: 1px solid var(--gray);
+	transition: all 0.2s;
+	text-align: center;
 }
 
 li:hover {
-  cursor: pointer;
-  animation: colors 2s infinite;
+	background-color: var(--light-gray);
 }
 
-button {
-  color: var(--light-gray);
-  background-color: var(--gray);
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 0 0 0 10px;
+img {
+	width: 85px;
+}
+
+small {
+	display: block;
+	font-size: 12px;
+	color: var(--light-blue);
 }
 
 /*  CSS Classes*/
-.dark-mode {
-  background-color: var(--gray);
-  color: var(--light-gray);
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.5;
 }
 
-/*  Animations  */
-@keyframes colors {
-  0% {
-    background-color: var(--pastel-green);
-    color: var(--gray);
-  }
-  20% {
-    background-color: var(--pastel-pink);
-    color: var(--gray);
-  }
-  40% {
-    background-color: var(--pastel-purple);
-    color: var(--gray);
-  }
-  60% {
-    background-color: var(--pastel-red);
-    color: var(--gray);
-  }
-  80% {
-    background-color: var(--pastel-teal);
-    color: var(--gray);
-  }
-  100% {
-    background-color: var(--pastel-yellow);
-    color: var(--gray);
-  }
+/*	Media Queries	*/
+@media only screen and (max-width: 600px) {
+	ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	img {
+		width: 58px;
+	}
 }
