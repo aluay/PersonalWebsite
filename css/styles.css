@@ -1,8 +1,8 @@
 /*	Color variables	*/
 :root {
 	--white: #fff;
-	--gray: #ebebeb;
-	--light-gray: #edf0f4;
+	--gray: #d1d1d1;
+	--light-gray: #e7e7e7;
 	--dark-blue: #2c3944;
 	--light-blue: #5d768d;
 	--red: #ee5253;
@@ -30,63 +30,71 @@ body {
 	-webkit-text-stroke: 0.025em rgba(51, 51, 51, 0.5) !important;
 }
 
-h1 {
-	font-weight: 900;
-	font-size: clamp(32px, 6vw, 48px);
-}
-
-h2 {
-	margin: 0.5em 0em;
-	font-weight: 600;
-	font-size: clamp(18px, 2vw, 24px);
-}
-
-ul {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	margin-top: 2em;
-}
-
-li {
-	padding: 1em;
-	cursor: pointer;
-	border-radius: 7px;
-	border: 1px solid var(--gray);
-	transition: all 0.2s;
-	text-align: center;
-}
-
-li:hover {
-	background-color: var(--light-gray);
-}
-
-img {
-	width: 85px;
-}
-
-small {
-	display: block;
-	font-size: 12px;
-	color: var(--light-blue);
-}
-
-/*  CSS Classes*/
-.content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	line-height: 1.5;
-}
-
 /*	Media Queries	*/
-@media only screen and (max-width: 600px) {
-	ul {
-		grid-template-columns: repeat(3, 1fr);
+@media (min-width: 320px) {
+	h1 {
+		font-weight: 900;
+		font-size: clamp(32px, 6vw, 48px);
 	}
+
+	h2 {
+		margin: 0.5em 0em;
+		font-weight: 600;
+		font-size: clamp(18px, 2vw, 24px);
+	}
+
+	ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		margin-top: 2em;
+	}
+
+	li {
+		padding: 1em;
+		cursor: pointer;
+		border-radius: 7px;
+		border: 1px solid var(--gray);
+		transition: all 0.2s;
+		text-align: center;
+	}
+
+	li:hover {
+		border: 1px solid var(--red);
+	}
+
 	img {
-		width: 58px;
+		width: 40px;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	li:hover > img {
+		-webkit-filter: none;
+		filter: none;
+	}
+
+	small {
+		display: block;
+		font-size: 12px;
+		color: var(--light-blue);
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		line-height: 1.5;
+		background: url("/assets/blob.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@media (min-width: 801px) {
+	ul {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
