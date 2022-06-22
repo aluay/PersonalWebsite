@@ -88,9 +88,3 @@ body {
 		line-height: 1.5;
 	}
 }
-
-@media (min-width: 961px) {
-	ul {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
