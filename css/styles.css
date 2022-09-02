@@ -42,7 +42,7 @@ body {
 		font-size: clamp(18px, 2vw, 24px);
 	}
 
-	ul {
+	.skills {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-column-gap: 10px;
@@ -50,7 +50,7 @@ body {
 		margin-top: 2em;
 	}
 
-	li {
+	.skills li {
 		padding: 1em;
 		cursor: pointer;
 		border-radius: 7px;
@@ -59,19 +59,29 @@ body {
 		text-align: center;
 	}
 
-	li:hover {
+	.skills li:hover {
 		border: 1px solid var(--red);
 	}
 
 	img {
-		width: 40px;
+		width: 20px;
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
 	}
 
-	li:hover > img {
+	.skills li:hover > img {
 		-webkit-filter: none;
 		filter: none;
+	}
+
+	.sites{
+		margin-top: 1em;
+		display: flex;
+		justify-content:center;
+	}
+
+	.sites li{
+		margin: 0em 1em;
 	}
 
 	small {
@@ -86,5 +96,13 @@ body {
 		align-items: center;
 		height: 100vh;
 		line-height: 1.5;
+	}
+	.secret{
+		position: absolute;
+		bottom: 100px;
+		width: 5px;
+		height: 5px;
+		background-color: var(--red);
+		cursor: pointer;
 	}
 }
