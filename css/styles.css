@@ -8,10 +8,10 @@
 	--red: #ee5253;
 }
 
-::selection {
+/* ::selection {
 	background-color: var(--red);
 	color: var(--white);
-}
+} */
 
 /*	Tag styles	*/
 * {
@@ -21,7 +21,7 @@
 
 body {
 	color: var(--dark-blue);
-	background-color: var(--white);
+	background: url(/assets/blobanimation.svg) no-repeat center;
 	font-family: "Inter", sans-serif;
 	-moz-osx-font-smoothing: grayscale !important;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
@@ -30,6 +30,12 @@ body {
 }
 
 /*	Media Queries	*/
+@media only screen and (max-width: 450px) {
+	body {
+		background-size: 200%;
+	}
+}
+
 @media (min-width: 320px) {
 	h1 {
 		font-weight: 900;
@@ -42,52 +48,10 @@ body {
 		font-size: clamp(18px, 2vw, 24px);
 	}
 
-	.skills {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: 10px;
-		grid-row-gap: 10px;
-		margin-top: 2em;
-	}
-
-	.skills li {
-		padding: 1em;
-		cursor: pointer;
-		border-radius: 7px;
-		border: 1px solid var(--gray);
-		transition: all 0.2s;
-		text-align: center;
-	}
-
-	.skills li:hover {
-		border: 1px solid var(--red);
-	}
-
-	img {
-		width: 20px;
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
-
-	.skills li:hover > img {
-		-webkit-filter: none;
-		filter: none;
-	}
-
-	.sites{
-		margin-top: 1em;
-		display: flex;
-		justify-content:center;
-	}
-
-	.sites li{
-		margin: 0em 1em;
-	}
-
 	small {
 		display: block;
-		font-size: 12px;
-		color: var(--light-blue);
+		font-size: clamp(12px, 2vw, 16px);
+		color: var(--white);
 	}
 
 	main {
@@ -97,12 +61,55 @@ body {
 		height: 100vh;
 		line-height: 1.5;
 	}
-	.secret{
-		position: absolute;
-		bottom: 100px;
-		width: 5px;
-		height: 5px;
-		background-color: var(--red);
+
+	img {
+		width: 30px;
+		/* -webkit-filter: grayscale(100%); */
+		/* filter: grayscale(100%); */
+	}
+
+	.skills {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		margin-top: 2em;
+	}
+
+	.skills li {
+		background: rgba(255, 255, 255, 0.11);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(9px);
+		-webkit-backdrop-filter: blur(9px);
+		padding: 1em;
 		cursor: pointer;
+		border-radius: 7px;
+		border: 1px solid transparent;
+		transition: all 0.2s;
+		text-align: center;
+	}
+
+	.skills li:hover {
+		border: 1px solid var(--white);
+	}
+
+	/* .skills li:hover > img {
+		-webkit-filter: none;
+		filter: none;
+	} */
+
+	.sites {
+		margin-top: 1em;
+		display: flex;
+		justify-content: center;
+	}
+
+	.sites li {
+		margin: 0em 1em;
+	}
+
+	.sites img:hover {
+		filter: invert(100%);
 	}
 }
